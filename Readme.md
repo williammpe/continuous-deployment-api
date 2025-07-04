@@ -5,7 +5,7 @@ API simples e segura que permite executar scripts `.sh` via chamadas HTTP, ideal
 ---
 
 ## 📂 Estrutura do Projeto
-
+```bash
 continuous-deployment-api/
 ├── app.py # API Flask
 ├── Dockerfile # Imagem com Python + Docker CLI
@@ -15,7 +15,7 @@ continuous-deployment-api/
 │ ├── api.sh
 │ └── test-service.sh
 └── Readme.md # Este arquivo
-
+```
 ---
 
 ## 🚀 Como Funciona
