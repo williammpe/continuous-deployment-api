@@ -16,7 +16,6 @@ continuous-deployment-api/
 │ └── test-service.sh
 └── Readme.md # Este arquivo
 
-
 ---
 
 ## 🚀 Como Funciona
@@ -93,4 +92,4 @@ Em produção, você pode movê-lo para uma variável de ambiente com os.getenv(
 
 👨‍💻 Autor
 - William Morais Pereira
-[\LinkedIn](https://www.linkedin.com/in/william-morais-pereira/)
+[LinkedIn](https://www.linkedin.com/in/william-morais-pereira/)
