@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    container_name: continuous-deployment-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./TEMP/:/app/projects
+    environment:
+      - FLASK_ENV=production
