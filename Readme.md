@@ -46,19 +46,27 @@ cd continuous-deployment-api
 ```
 
 ### 2. Subir o container
+
+```bash
 docker-compose up --build
-- A API ficará disponível em: http://localhost:5000
+```
+
+A API ficará disponível em: http://localhost:5000
 
 
 ### Exemplo de Requisição
+
+```bash
 curl -X POST http://localhost:5000/executar-script \
   -H "Authorization: Bearer 1234" \
   -H "Content-Type: application/json" \
   -d '{"script": "test-service"}'
+```
 
-- Isso executa o script scripts/test-service.sh.
+Isso executa o script scripts/test-service.sh.
 
 ### ⚙️ scripts/*.sh
+
 ```bash
 #!/bin/bash
 CONTAINER="test-service"
@@ -67,12 +75,15 @@ docker compose -f /app/projects/${CONTAINER}/docker-compose.yaml up --force-recr
 echo "${CONTAINER} iniciado!"
 ```
 
-- Os projetos são montados via volume a partir de ./TEMP.
+Os projetos são montados via volume a partir de ./TEMP.
 
 ### 🔐 Configuração de Token
+
 ```bash
 SECRET_TOKEN = "1234"
 ```
+
+Em produção, você pode movê-lo para uma variável de ambiente com os.getenv("SECRET_TOKEN").
 
 ### 📌 Observações
 
@@ -82,4 +93,4 @@ SECRET_TOKEN = "1234"
 
 👨‍💻 Autor
 - William Morais Pereira
-[\[LinkedIn](https://www.linkedin.com/in/william-morais-pereira/)
+[\LinkedIn](https://www.linkedin.com/in/william-morais-pereira/)
